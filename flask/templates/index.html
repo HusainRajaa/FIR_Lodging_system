@@ -1,0 +1,258 @@
+<!-- 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chatbot</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="chat-container">
+        <div class="chat-header">
+            <img src="{{ url_for('static', filename='mh2.png') }}" alt="Logo" class="logo">
+            
+        </div>
+        <div id="chat-box" class="chat-box"></div>
+        <div class="input-container">
+            <input id="user-input" type="text" placeholder="Type your message here...">
+            <button id="send-button">Send</button>
+        </div>
+
+        <div class="suggestion-container">
+            <div class="suggestion-list">
+                <button class="suggestion-button" onclick="sendPredefinedMessage('hello')">  hello</button>
+                <button class="suggestion-button" onclick="sendPredefinedMessage('How do I use this site?')">How do I use this site?</button>
+                <button class="suggestion-button" onclick="sendPredefinedMessage('How do I file a FIR?')">How do I file a FIR?</button>
+                <button class="suggestion-button" onclick="sendPredefinedMessage('What is crime?')">What is crime?</button>
+                <button class="suggestion-button" onclick="sendPredefinedMessage('Who should report a FIR?')">Who should report a FIR?</button>
+                <button class="suggestion-button" onclick="sendPredefinedMessage('How do I get the FIR form?')">How do I get the FIR form?</button>
+                <button class="suggestion-button" onclick="sendPredefinedMessage('What information do I need to provide to file a FIR?')">What information do I need to provide to file a FIR?</button>
+                <button class="suggestion-button" onclick="sendPredefinedMessage('How long does it take to process an FIR?')">How long does it take to process an FIR?</button>
+                <button class="suggestion-button" onclick="sendPredefinedMessage('Can I track the status of my FIR?')">Can I track the status of my FIR?</button>
+                <button class="suggestion-button" onclick="sendPredefinedMessage('How do I contact support?')">How do I contact support?</button>
+                <button class="suggestion-button" onclick="sendPredefinedMessage('Which technology is used in it?')">Which technology is used in it?</button>
+                <button class="suggestion-button" onclick="sendPredefinedMessage('What is blockchain?')">What is blockchain?</button>
+                <button class="suggestion-button" onclick="sendPredefinedMessage('How should blockchain work?')">How should blockchain work?</button>
+                <button class="suggestion-button" onclick="sendPredefinedMessage('Which information is required to fill the FIR?')">Which information is required to fill the FIR?</button>
+                <button class="suggestion-button" onclick="sendPredefinedMessage('What is FIR?')">What is FIR?</button>
+                <button class="suggestion-button" onclick="sendPredefinedMessage('What is the benefit of using this site?')">What is the benefit of using this site?</button>
+            </div>
+        </div>
+        <div class="resize-handle"></div>
+    </div>
+
+    <script>
+        document.getElementById('send-button').addEventListener('click', sendMessage);
+        document.getElementById('user-input').addEventListener('keypress', function(event) {
+            if (event.key === 'Enter') {
+                sendMessage();
+            }
+        });
+
+        function sendMessage() {
+            const userInput = document.getElementById('user-input');
+            const chatBox = document.getElementById('chat-box');
+            const messageText = userInput.value.trim();
+
+            if (messageText === '') return;
+
+            const userMessage = document.createElement('div');
+            userMessage.classList.add('message', 'user');
+            userMessage.textContent = messageText;
+            chatBox.appendChild(userMessage);
+
+            userInput.value = '';
+
+            fetch('/get-response', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ message: messageText })
+            })
+            .then(response => response.json())
+            .then(data => {
+                const botMessage = document.createElement('div');
+                botMessage.classList.add('message', 'bot');
+                botMessage.textContent = data.response;
+                chatBox.appendChild(botMessage);
+
+                chatBox.scrollTop = chatBox.scrollHeight;
+            })
+            .catch(error => console.error('Error:', error));
+        }
+
+        function sendPredefinedMessage(messageText) {
+            const userInput = document.getElementById('user-input');
+            userInput.value = messageText;
+            sendMessage();
+        }
+
+      
+        const chatContainer = document.querySelector('.chat-container');
+        const resizeHandle = document.querySelector('.resize-handle');
+
+        let isResizing = false;
+        let lastDownY = 0;
+
+        resizeHandle.addEventListener('mousedown', (event) => {
+            isResizing = true;
+            lastDownY = event.clientY;
+            document.addEventListener('mousemove', handleMouseMove);
+            document.addEventListener('mouseup', () => {
+                isResizing = false;
+                document.removeEventListener('mousemove', handleMouseMove);
+            });
+        });
+
+        function handleMouseMove(event) {
+            if (!isResizing) return;
+            const offsetBottom = chatContainer.getBoundingClientRect().bottom - event.clientY;
+            chatContainer.style.height = `${chatContainer.offsetHeight + offsetBottom}px`;
+        }
+    </script>
+</body>
+</html> 
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ -->
+
+
+
+
+
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Chatbot</title>
+     <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+ </head>
+ <body>
+     <!-- Add video background -->
+     <video autoplay muted loop id="bg-video">
+         <source src="{{ url_for('static', filename='7714069-hd_720_1280_30fps.mp4') }}" type="video/mp4">
+         Your browser does not support HTML5 video.
+     </video>
+ 
+     <div class="chat-container">
+         <div class="chat-header">
+             <img src="{{ url_for('static', filename='mh2.png') }}" alt="Logo" class="logo">
+         </div>
+         <div id="chat-box" class="chat-box"></div>
+         <div class="input-container">
+             <input id="user-input" type="text" placeholder="Type your message here...">
+             <button id="send-button">Send</button>
+         </div>
+ 
+         <div class="suggestion-container">
+            <div class="suggestion-list">
+                <button class="suggestion-button" onclick="sendPredefinedMessage('hello')">  hello</button>
+                <button class="suggestion-button" onclick="sendPredefinedMessage('How do I use this site?')">How do I use this site?</button>
+                <button class="suggestion-button" onclick="sendPredefinedMessage('How do I file a FIR?')">How do I file a FIR?</button>
+                <button class="suggestion-button" onclick="sendPredefinedMessage('What is crime?')">What is crime?</button>
+                <button class="suggestion-button" onclick="sendPredefinedMessage('Who should report a FIR?')">Who should report a FIR?</button>
+                <button class="suggestion-button" onclick="sendPredefinedMessage('How do I get the FIR form?')">How do I get the FIR form?</button>
+                <button class="suggestion-button" onclick="sendPredefinedMessage('What information do I need to provide to file a FIR?')">What information do I need to provide to file a FIR?</button>
+                <button class="suggestion-button" onclick="sendPredefinedMessage('How long does it take to process an FIR?')">How long does it take to process an FIR?</button>
+                <button class="suggestion-button" onclick="sendPredefinedMessage('Can I track the status of my FIR?')">Can I track the status of my FIR?</button>
+                <button class="suggestion-button" onclick="sendPredefinedMessage('How do I contact support?')">How do I contact support?</button>
+                <button class="suggestion-button" onclick="sendPredefinedMessage('Which technology is used in it?')">Which technology is used in it?</button>
+                <button class="suggestion-button" onclick="sendPredefinedMessage('What is blockchain?')">What is blockchain?</button>
+                <button class="suggestion-button" onclick="sendPredefinedMessage('How should blockchain work?')">How should blockchain work?</button>
+                <button class="suggestion-button" onclick="sendPredefinedMessage('Which information is required to fill the FIR?')">Which information is required to fill the FIR?</button>
+                <button class="suggestion-button" onclick="sendPredefinedMessage('What is FIR?')">What is FIR?</button>
+                <button class="suggestion-button" onclick="sendPredefinedMessage('What is the benefit of using this site?')">What is the benefit of using this site?</button>
+            </div>
+         </div>
+         <div class="resize-handle"></div>
+     </div>
+ 
+     <script>
+         document.getElementById('send-button').addEventListener('click', sendMessage);
+         document.getElementById('user-input').addEventListener('keypress', function(event) {
+             if (event.key === 'Enter') {
+                 sendMessage();
+             }
+         });
+ 
+         function sendMessage() {
+             const userInput = document.getElementById('user-input');
+             const chatBox = document.getElementById('chat-box');
+             const messageText = userInput.value.trim();
+ 
+             if (messageText === '') return;
+ 
+             const userMessage = document.createElement('div');
+             userMessage.classList.add('message', 'user');
+             userMessage.textContent = messageText;
+             chatBox.appendChild(userMessage);
+ 
+             userInput.value = '';
+ 
+             fetch('/get-response', {
+                 method: 'POST',
+                 headers: {
+                     'Content-Type': 'application/json'
+                 },
+                 body: JSON.stringify({ message: messageText })
+             })
+             .then(response => response.json())
+             .then(data => {
+                 const botMessage = document.createElement('div');
+                 botMessage.classList.add('message', 'bot');
+                 botMessage.textContent = data.response;
+                 chatBox.appendChild(botMessage);
+ 
+                 chatBox.scrollTop = chatBox.scrollHeight;
+             })
+             .catch(error => console.error('Error:', error));
+         }
+ 
+         function sendPredefinedMessage(messageText) {
+             const userInput = document.getElementById('user-input');
+             userInput.value = messageText;
+             sendMessage();
+         }
+ 
+         const chatContainer = document.querySelector('.chat-container');
+         const resizeHandle = document.querySelector('.resize-handle');
+ 
+         let isResizing = false;
+         let lastDownY = 0;
+ 
+         resizeHandle.addEventListener('mousedown', (event) => {
+             isResizing = true;
+             lastDownY = event.clientY;
+             document.addEventListener('mousemove', handleMouseMove);
+             document.addEventListener('mouseup', () => {
+                 isResizing = false;
+                 document.removeEventListener('mousemove', handleMouseMove);
+             });
+         });
+ 
+         function handleMouseMove(event) {
+             if (!isResizing) return;
+             const offsetBottom = chatContainer.getBoundingClientRect().bottom - event.clientY;
+             chatContainer.style.height = `${chatContainer.offsetHeight + offsetBottom}px`;
+         }
+     </script>
+ </body>
+ </html>
+ 
