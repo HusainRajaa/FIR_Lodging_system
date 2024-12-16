@@ -1,0 +1,90 @@
+
+.contact-page {
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    color: black;
+   
+}
+
+.contact-page h1 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: black;
+   
+}
+
+.contact-page h2 {
+    font-size: 1.5em;
+    margin-top: 30px;
+    margin-bottom: 15px;
+    color: black;
+   
+}
+
+.contact-page table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 30px;
+}
+
+.contact-page table,
+th,
+td {
+    border: 1px solid #ccc;
+}
+
+.contact-page th,
+.contact-page td {
+    padding: 10px;
+    text-align: left;
+    color: black;
+  
+}
+
+.contact-page th {
+    background-color: #f4f4f4;
+    color: black;
+  
+}
+
+.contact-page tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+@media (max-width: 768px) {
+
+    .contact-page table,
+    .contact-page th,
+    .contact-page td {
+        display: block;
+        width: 100%;
+    }
+
+    .contact-page th,
+    .contact-page td {
+        box-sizing: border-box;
+        padding: 10px;
+        color: black;
+    }
+
+    .contact-page th {
+        background-color: #f4f4f4;
+        font-size: 1.2em;
+        color: black;
+    }
+
+    .contact-page td {
+        font-size: 1em;
+        display: block;
+        text-align: left;
+        color: black;
+    }
+
+    .contact-page td::before {
+        content: attr(data-label);
+        font-weight: bold;
+        text-transform: uppercase;
+        display: inline-block;
+        width: 40%;
+    }
+}

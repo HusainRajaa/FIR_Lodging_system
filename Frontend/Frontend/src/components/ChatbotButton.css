@@ -1,0 +1,23 @@
+/* Chatbot Button Styling */
+.chatbot-button {
+    position: fixed;
+    bottom: 80px;
+    right: 30px;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-color: #007bff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    z-index: 1000; /* Ensure it is above other elements */
+  }
+  
+  .chatbot-button img {
+    width: 30px;
+    height: 30px;
+    color: white;
+  }
+  

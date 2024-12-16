@@ -1,0 +1,40 @@
+.laws-container {
+    overflow: hidden;
+    white-space: nowrap;
+    margin: 40px 0; 
+    width: 100%;
+    background-color: #22313f; 
+    padding: 20px; 
+    border-radius: 12px; 
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); 
+    position: relative; 
+    transform: translateY(-30px); 
+  }
+  
+  .laws-slider {
+    display: inline-block;
+    animation: slide 200s linear infinite;
+    
+  }
+  
+  @keyframes slide {
+    from { transform: translateX(100%); }
+    to { transform: translateX(-100%); }
+  }
+  
+  .law-item {
+    display: inline-block;
+    padding: 0 30px; 
+    font-size: 18px;
+    color: var(--text-color);
+    background: rgba(255, 255, 255, 0.2); 
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+    transform: scale(1); 
+    transition: transform 0.5s ease, box-shadow 0.3s ease; 
+  }
+  
+  .law-item:hover {
+    transform: scale(1.1) rotateY(10deg); 
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4); 
+  }

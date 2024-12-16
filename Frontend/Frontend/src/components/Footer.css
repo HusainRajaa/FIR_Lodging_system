@@ -1,0 +1,17 @@
+.footer {
+  background-color: #000; /* Pure black background */
+  color: #fff; /* Bright white text for contrast */
+  padding: 10px 20px;
+  width: 100%;
+  display: flex;
+  justify-content: center; /* Center-align the text */
+  align-items: center;
+  position: fixed;
+  bottom: 0; /* Stick the footer to the bottom */
+}
+
+.footer-container {
+  margin: 0; /* No extra margins */
+  font-size: 16px; /* Slightly larger font for better visibility */
+  font-weight: normal; /* Keep the text readable with normal weight */
+}

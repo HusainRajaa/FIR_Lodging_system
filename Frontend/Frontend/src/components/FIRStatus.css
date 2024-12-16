@@ -1,0 +1,250 @@
+/* Main Container */
+.admin-status-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+  background: linear-gradient(135deg, #e9f5fc, #ffffff);
+  border-radius: 12px;
+  box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.15);
+  max-width: 800px;
+  margin: 50px auto;
+  font-family: 'Arial', sans-serif;
+}
+
+/* Title */
+.status-title {
+  color: #34495e;
+  margin-bottom: 30px;
+  font-size: 32px;
+  font-weight: bold;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  background: linear-gradient(to right, #007bff, #6a11cb);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Form */
+.cid-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.cid-label {
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #555;
+  align-self: flex-start;
+  font-size: 16px;
+}
+
+/* Input Field */
+.cid-input {
+  padding: 15px;
+  font-size: 18px;
+  border: 2px solid #ddd;
+  border-radius: 6px;
+  width: 100%;
+  max-width: 600px;
+  margin-bottom: 20px;
+  transition: all 0.3s ease;
+  background-color: #fff;
+}
+
+.cid-input:focus {
+  border-color: #007bff;
+  outline: none;
+  box-shadow: 0px 0px 8px rgba(0, 123, 255, 0.4);
+}
+
+/* Submit Button */
+.submit-button {
+  padding: 12px 25px;
+  background-color: #28a745;
+  color: #fff;
+  font-size: 18px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  width: 100%;
+  max-width: 600px;
+  font-weight: bold;
+}
+
+.submit-button:hover {
+  background-color: #218838;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Submitted CIDs Table */
+.submitted-cids-table {
+  margin-top: 30px;
+  width: 100%;
+  max-width: 700px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  background-color: #ffffff;
+  box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.1);
+}
+
+.submitted-cids-table h3 {
+  text-align: center;
+  color: #333;
+  margin: 15px 0;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th, td {
+  padding: 12px;
+  text-align: center;
+  border-bottom: 1px solid #eee;
+  font-size: 16px;
+}
+
+th {
+  background-color: #007bff;
+  color: #ffffff;
+  text-transform: uppercase;
+}
+
+td {
+  background-color: #f9f9f9;
+  color: #333;
+}
+
+tr:hover {
+  background-color: #f1f1f1;
+}
+
+/* Track Button */
+.track-button {
+  padding: 8px 15px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.track-button:hover {
+  background-color: #0056b3;
+}
+
+/* Tracking Arrows */
+/* Tracking Arrows Section */
+.fir-tracking-arrows {
+  margin-top: 30px;
+  text-align: center;
+  padding: 20px;
+  background-color: #737376;
+  border-radius: 8px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 800px;
+  margin: 20px auto;
+}
+
+/* Arrows and Steps Container */
+.tracking-arrows-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+/* Individual Steps */
+.step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 15px;
+  border: 2px solid #ccc;
+  border-radius: 50%;
+  width: 90px;
+  height: 90px;
+  background-color: #f9f9f9;
+  text-align: center;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.step.completed {
+  border-color: #4caf50;
+  background-color: #e8f5e9;
+  box-shadow: 0px 4px 10px rgba(76, 175, 80, 0.5);
+}
+
+/* Step Number */
+.step span {
+  font-weight: bold;
+  font-size: 18px;
+  color: #333;
+  display: block;
+}
+
+/* Step Description */
+.step p {
+  margin-top: 5px;
+  font-size: 14px;
+  color: #555;
+  text-align: center;
+}
+
+/* Connecting Arrows */
+.arrow {
+  font-size: 24px;
+  color: #007bff;
+  margin: 0 10px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .tracking-arrows-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .arrow {
+    display: none; /* Simplifies layout for mobile */
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .cid-input,
+  .submit-button,
+  .submitted-cids-table {
+    max-width: 100%;
+  }
+
+  .tracking-arrows-container {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .step {
+    width: 60px;
+    height: 60px;
+  }
+
+  .arrow {
+    display: none; /* Hide arrows on small screens */
+  }
+}

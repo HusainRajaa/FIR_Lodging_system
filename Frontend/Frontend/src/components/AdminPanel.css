@@ -1,0 +1,194 @@
+/* Admin Panel Container */
+.admin-panel {
+  max-width: 500px;
+  margin: 60px auto;
+  padding: 50px;
+  background-color: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Admin Content */
+.admin-content {
+  margin-top: 20px;
+}
+
+.admin-content h2 {
+  font-size: 32px;
+  color: #34495e;
+  margin-bottom: 25px;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+}
+
+.admin-content h3 {
+  font-size: 24px;
+  color: #57606f;
+  margin-bottom: 20px;
+  font-weight: 500;
+}
+
+/* Buttons */
+.admin-content button {
+  width: 100%;
+  padding: 14px 20px;
+  background-color: #1abc9c;
+  border: none;
+  border-radius: 8px;
+  color: white;
+  font-size: 18px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.4s ease;
+  margin-bottom: 20px; /* Spacing between buttons */
+}
+
+.admin-content button:hover {
+  background-color: #16a085;
+}
+
+.admin-content button:focus {
+  outline: none;
+  box-shadow: 0 0 10px rgba(26, 188, 156, 0.5);
+}
+
+/* Admin Access Section */
+.admin-access {
+  margin-top: 20px;
+}
+
+.admin-access h2 {
+  font-size: 32px;
+  color: #34495e;
+  margin-bottom: 25px;
+  font-weight: 600;
+}
+
+.admin-access form {
+  margin: 0 auto;
+  max-width: 500px;
+}
+
+.admin-access .form-table {
+  width: 100%;
+  border-spacing: 15px;
+  margin-bottom: 20px; /* Space between form and button */
+}
+
+.admin-access label {
+  display: block;
+  font-size: 16px;
+  color: #2c3e50;
+  margin-bottom: 8px;
+}
+
+.admin-access input {
+  width: 100%;
+  padding: 15px;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  background-color: #f9fafb;
+  font-size: 16px;
+  color: #2c3e50;
+  box-sizing: border-box;
+  transition: border-color 0.4s ease, box-shadow 0.4s ease;
+}
+
+.admin-access input:focus {
+  border-color: #1abc9c;
+  outline: none;
+  box-shadow: 0 0 10px rgba(26, 188, 156, 0.1);
+}
+
+.admin-access button {
+  width: 100%;
+  padding: 14px 20px;
+  background-color: #1abc9c;
+  border: none;
+  border-radius: 8px;
+  color: white;
+  font-size: 18px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.4s ease;
+}
+
+.admin-access button:hover {
+  background-color: #16a085;
+}
+
+.admin-access button:focus {
+  outline: none;
+  box-shadow: 0 0 10px rgba(26, 188, 156, 0.5);
+}
+
+/* Error Messages */
+.admin-access p.error-message {
+  color: #e74c3c;
+  margin-bottom: 20px;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+/* CID List */
+.cid-list {
+  margin-top: 20px;
+  list-style-type: none;
+  padding: 0;
+}
+
+.cid-list li {
+  padding: 12px 15px;
+  background-color: #ecf0f1;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.cid-list li button {
+  background-color: #2ecc71;
+  padding: 8px 12px;
+  border: none;
+  border-radius: 6px;
+  color: white;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.4s ease;
+}
+
+.cid-list li button:hover {
+  background-color: #27ae60;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .admin-panel {
+    padding: 20px;
+  }
+
+  .admin-content h2,
+  .admin-content h3,
+  .admin-access h2 {
+    font-size: 24px;
+  }
+
+  .admin-content button,
+  .admin-access button {
+    font-size: 16px;
+    padding: 12px 18px;
+  }
+
+  .admin-access input {
+    font-size: 14px;
+    padding: 12px;
+  }
+
+  .admin-access .form-table {
+    width: 100%;
+  }
+}

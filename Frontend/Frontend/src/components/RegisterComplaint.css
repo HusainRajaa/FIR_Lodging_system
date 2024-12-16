@@ -1,0 +1,151 @@
+/* Container for the entire form */
+.register-complaint {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  font-family: 'Arial', sans-serif; /* Ensure the font supports Marathi characters */
+}
+
+/* Styling for the role selection section */
+.form-type-selection {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.form-type-selection h2 {
+  margin-bottom: 20px;
+  font-family: 'Arial', sans-serif; /* Ensure the font supports Marathi characters */
+}
+
+.form-type-selection button {
+  padding: 10px 20px;
+  margin: 5px;
+  font-size: 16px;
+  color: #fff;
+  background-color: #007bff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.form-type-selection button:hover {
+  background-color: #0056b3;
+}
+
+/* Form styling */
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  margin-bottom: 15px;
+  font-family: 'Arial', sans-serif; /* Ensure the font supports Marathi characters */
+}
+
+label input,
+label textarea {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+label textarea {
+  height: 100px;
+}
+
+button[type="submit"] {
+  padding: 10px 20px;
+  font-size: 16px;
+  color: #fff;
+  background-color: #007bff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button[type="submit"]:hover {
+  background-color: #0056b3;
+}
+
+/* Error message styling */
+.error {
+  color: #e74c3c;
+  font-size: 14px;
+  margin-top: 5px;
+}
+
+/* Styling for headings and paragraphs */
+h2, p {
+  font-family: 'Arial', sans-serif; /* Ensure the font supports Marathi characters */
+  color: #333; /* Dark color for better contrast */
+}
+
+p {
+  line-height: 1.5; /* Improve readability */
+}
+
+/* Responsive design for small screens */
+@media (max-width: 600px) {
+  .register-complaint {
+    padding: 10px;
+  }
+
+  label input,
+  label textarea {
+    padding: 6px;
+  }
+
+  button[type="submit"],
+  .form-type-selection button {
+    padding: 8px 16px;
+    font-size: 14px;
+  }
+}
+/* Add to RegisterComplaint.css */
+
+@keyframes shimmer {
+  0% {
+    background-position: -100% 0;
+  }
+  100% {
+    background-position: 100% 0;
+  }
+}
+
+.shimmer-button {
+  position: relative;
+  overflow: hidden;
+  background-color: var(--primary-color);
+  color: var(--text-color);
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+  box-shadow: 0 4px 6px var(--box-shadow-color);
+  background: linear-gradient(90deg, var(--primary-color) 25%, #3498db 50%, var(--primary-color) 75%);
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite;
+}
+
+.shimmer-button:hover {
+  background-color: var(--button-hover-color);
+  transform: translateY(-3px);
+}
+
+.shimmer-button:focus,
+.shimmer-button:focus-visible {
+  outline: 3px solid var(--button-hover-color);
+}
+label select {
+  width: 100%; /* Make it full width or set a specific width, e.g., 300px */
+  padding: 10px; /* Add padding for better appearance */
+  font-size: 16px; /* Increase font size */
+}
