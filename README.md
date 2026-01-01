@@ -1,4 +1,4 @@
-# 🚔 IntegriFIR - Blockchain-Based FIR Lodging System
+# IntegriFIR - Blockchain-Based FIR Lodging System
 
 A secure, transparent, and tamper-proof First Information Report (FIR) filing system built using blockchain technology, ensuring data integrity and citizen trust.
 
@@ -9,50 +9,50 @@ A secure, transparent, and tamper-proof First Information Report (FIR) filing sy
 
 ---
 
-## 📋 Table of Contents
+## Table of Contents
 
-- [Overview](#-overview)
-- [Features](#-features)
-- [Tech Stack](#-tech-stack)
-- [Project Structure](#-project-structure)
-- [Prerequisites](#-prerequisites)
-- [Installation & Setup](#-installation--setup)
-- [Running the Application](#-running-the-application)
-- [API Endpoints](#-api-endpoints)
-- [Smart Contract](#-smart-contract)
-- [Team](#-team)
+- [Overview](#overview)
+- [Features](#features)
+- [Tech Stack](#tech-stack)
+- [Project Structure](#project-structure)
+- [Prerequisites](#prerequisites)
+- [Installation & Setup](#installation--setup)
+- [Running the Application](#running-the-application)
+- [API Endpoints](#api-endpoints)
+- [Smart Contract](#smart-contract)
+- [Team](#team)
 
 ---
 
-## 🎯 Overview
+## Overview
 
 **IntegriFIR** is a comprehensive digital FIR lodging system that leverages blockchain technology to ensure:
 
-- ✅ **Immutability** - Once an FIR is filed, it cannot be tampered with
-- ✅ **Transparency** - All stakeholders can verify FIR authenticity
-- ✅ **Accessibility** - Citizens can file FIRs online from anywhere
-- ✅ **Accountability** - Complete audit trail of all actions
+- **Immutability** - Once an FIR is filed, it cannot be tampered with
+- **Transparency** - All stakeholders can verify FIR authenticity
+- **Accessibility** - Citizens can file FIRs online from anywhere
+- **Accountability** - Complete audit trail of all actions
 
 The system uses **IPFS** for distributed storage of FIR documents and stores the Content Identifiers (CIDs) on the **Ethereum blockchain** for verification.
 
 ---
 
-## ✨ Features
+## Features
 
 | Feature | Description |
 |---------|-------------|
-| 🔐 **Aadhaar-based Authentication** | Secure login using Aadhaar number with OTP verification |
-| 👤 **Age Verification** | Face detection-based age estimation to verify eligibility |
-| 📝 **Online FIR Filing** | Easy-to-use form for filing complaints |
-| 🔗 **Blockchain Storage** | FIR CIDs stored on Ethereum for immutability |
-| 📊 **FIR Status Tracking** | Real-time tracking of FIR status |
-| 🤖 **AI Chatbot** | Fuzzy-matching chatbot for user assistance |
-| 👮 **Admin Panel** | Police station dashboard for FIR management |
-| 🏢 **Multi-Station Support** | Support for multiple police stations |
+| **Aadhaar-based Authentication** | Secure login using Aadhaar number with OTP verification |
+| **Age Verification** | Face detection-based age estimation to verify eligibility |
+| **Online FIR Filing** | Easy-to-use form for filing complaints |
+| **Blockchain Storage** | FIR CIDs stored on Ethereum for immutability |
+| **FIR Status Tracking** | Real-time tracking of FIR status |
+| **AI Chatbot** | Fuzzy-matching chatbot for user assistance |
+| **Admin Panel** | Police station dashboard for FIR management |
+| **Multi-Station Support** | Support for multiple police stations |
 
 ---
 
-## 🛠 Tech Stack
+## Tech Stack
 
 ### Frontend
 - **React.js** - UI library
@@ -74,7 +74,7 @@ The system uses **IPFS** for distributed storage of FIR documents and stores the
 
 ---
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 IntegriFIR/
@@ -119,7 +119,7 @@ IntegriFIR/
 
 ---
 
-## 📋 Prerequisites
+## Prerequisites
 
 Before running this project, ensure you have:
 
@@ -132,7 +132,7 @@ Before running this project, ensure you have:
 
 ---
 
-## 🚀 Installation & Setup
+## Installation & Setup
 
 ### 1. Clone the Repository
 
@@ -215,7 +215,7 @@ CREATE TABLE cids (
 
 ---
 
-## ▶️ Running the Application
+## Running the Application
 
 ### Start all services:
 
@@ -242,7 +242,7 @@ npm run dev
 
 ---
 
-## 📡 API Endpoints
+## API Endpoints
 
 ### Node.js Backend (`localhost:5000`)
 
@@ -262,7 +262,7 @@ npm run dev
 
 ---
 
-## 📜 Smart Contract
+## Smart Contract
 
 The `FIRSystem.sol` contract provides:
 
@@ -279,19 +279,19 @@ function getAllCIDs() public view returns (string[] memory)
 
 ---
 
-## 👥 Team
+## Team
 
-Built with ❤️ for **Smart India Hackathon 2024**
+Built for **Smart India Hackathon 2024**
 
 ---
 
-## 📄 License
+## License
 
 This project is licensed under the MIT License.
 
 ---
 
-## 🤝 Contributing
+## Contributing
 
 1. Fork the repository
 2. Create a feature branch (`git checkout -b feature/AmazingFeature`)
@@ -302,5 +302,5 @@ This project is licensed under the MIT License.
 ---
 
 <p align="center">
-  <b>IntegriFIR</b> - Securing Justice Through Technology 🔒
+  <b>IntegriFIR</b> - Securing Justice Through Technology
 </p>
